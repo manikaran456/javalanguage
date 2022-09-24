@@ -1,0 +1,46 @@
+import java.util.*;
+
+public class firstclass{
+    /**
+     * @param args
+     */
+     public static void main (String args[]){
+
+      Scanner sc = new Scanner(System.in);
+      int a=sc.nextInt();
+      int b=sc.nextInt();
+
+      if(a%b==0)
+      System.out.println("GCD is :- "+b);
+
+      else if (b%a==0)
+      System.out.println("GCD is :- "+a);
+
+      else {
+        int g=1;
+        if(a<b){
+          for(int i=a;i>=2;i--){
+            if(a%i==0 && b%i==0){
+            g=i;
+            break;
+            }
+          
+          }
+        }
+
+        else{
+          for(int i=b;i>=2;i--){
+            if(a%i==0 && b%i==0){
+            g=i;
+            break;
+            }
+          
+          }
+        }
+        System.out.println("GCD is :- "+g);
+
+      }
+    }
+      
+      
+}
